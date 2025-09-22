@@ -4,8 +4,6 @@
 <head>
     <title>Hengrui Wang</title>
 
-
-    
     <!-- Meta -->
     <meta name="google-site-verification" content="C4ap4GvJ1LcgMMoKaN9kn_TDZfo5WBADrysK9PJoC3A" />
     <meta charset="utf-8">
@@ -13,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Responsive Resume Template">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <!--link rel="shortcut icon" href="favicon.ico"-->
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
@@ -24,11 +21,40 @@
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
 
-
+    <style>
+        /* === Custom additions for 3/5 + 2/5 layout === */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr; /* 3/5 and 2/5 */
+            grid-gap: 2rem;
+        }
+        /* Stack on smaller screens */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Tighter sections in right rail */
+        .side-rail .resume-section-title { margin-bottom: 1rem; }
+        .side-rail .resume-timeline { margin-top: 0.5rem; }
+        /* Interests image */
+        .interests-img {
+            width: 100%;
+            max-width: 460px; /* keep it neat in the 2/5 rail */
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .interests-caption { font-size: 0.95rem; color: #666; margin-top: 0.5rem; }
+        /* Remove school labels in Teaching items */
+        .teaching-item { padding-bottom: 0.75rem; border-bottom: 1px dashed #e9ecef; margin-bottom: 0.75rem; }
+        .teaching-time { font-weight: 500; color: #6c757d; }
+        .teaching-course { font-weight: 600; }
+    </style>
 </head>
-    
-<body>
 
+<body>
     <article class="resume-wrapper text-center position-relative">
         <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
             <header class="resume-header pt-4 pt-md-0">
@@ -37,278 +63,185 @@
                     <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
                         <div class="primary-info">
                             <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Hengrui Wang</h1>
-                            <!-- <div class="title mb-3">Senior Undergraduate</div> -->
                             <ul class="list-unstyled">
-                                <li class="mb-2"><i class="far fa-envelope fa-fw mr-2"
-                                        data-fa-transform="grow-3"></i>wang-hr21@mails.tsinghua.edu.cn</li>
-                                <li><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>WeChat: 
-                                    whr98991230 </li>
+                                <li class="mb-2"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>wang-hr21@mails.tsinghua.edu.cn</li>
+                                <li><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>WeChat: whr98991230</li>
                             </ul>
                             <ul class="resume-social list-unstyled">
-    <li class="mb-3">
-        <a href="Hengrui.pdf" target="_blank">
-            <span class="fa-container text-center mr-2">
-                <i class="far fa-file-pdf fa-fw"></i>
-            </span>CV
-        </a>
-    </li>
-    <li class="mb-3">
-        <a href="https://scholar.google.com.hk/citations?user=RGSdeUcAAAAJ&hl=zh-CN" target="_blank">
-            <span class="fa-container text-center mr-2">
-                <i class="fas fa-graduation-cap fa-fw"></i>
-            </span>Google Scholar
-        </a>
-    </li>
-</ul>
-
+                                <li class="mb-3">
+                                    <a href="Hengrui.pdf" target="_blank">
+                                        <span class="fa-container text-center mr-2">
+                                            <i class="far fa-file-pdf fa-fw"></i>
+                                        </span>CV
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="https://scholar.google.com.hk/citations?user=RGSdeUcAAAAJ&hl=zh-CN" target="_blank">
+                                        <span class="fa-container text-center mr-2">
+                                            <i class="fas fa-graduation-cap fa-fw"></i>
+                                        </span>Google Scholar
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                       
                     </div>
-                    <!--//media-body-->
                 </div>
-                <!--//media-->
             </header>
+
             <div class="resume-body p-5">
                 <section class="resume-section summary-section mb-5">
                     <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">About Me</h2>
                     <div class="resume-section-content">
-  <p class="mb-3">
-    I am a PhD student in the Institute for Interdisciplinary Information Science (Yao Class) at Tsinghua University, advised by
-    <a href="https://people.iiis.tsinghua.edu.cn/~huanchen/index.html" target="_blank">Prof. Huanchen Zhang</a>.
-    Before joining Tsinghua, I obtained my BS at Yuanpei College of Peking University, advised by
-    <a href="https://yangtonghome.github.io/" target="_blank">Prof. Tong Yang</a>.
-    My research interests mainly lie in designing lightning-fast data structures and algorithms for storage, databases, and machine learning systems. I recently began designing a high-performance key-value store for HFT systems.
-  </p>
-
-  <p class="mb-0">
-    I am actively seeking opportunities in the computer systems research community (academic roles) as well as quantitative research positions in industry.
-    If you find my work relevant, feel free to contact me via email or WeChat.
-  </p>
-</div>
-
+                        <p class="mb-3">
+                            I am a PhD student in the Institute for Interdisciplinary Information Science (Yao Class) at Tsinghua University, advised by
+                            <a href="https://people.iiis.tsinghua.edu.cn/~huanchen/index.html" target="_blank">Prof. Huanchen Zhang</a>.
+                            Before joining Tsinghua, I obtained my BS at Yuanpei College of Peking University, advised by
+                            <a href="https://yangtonghome.github.io/" target="_blank">Prof. Tong Yang</a>.
+                            My research interests mainly lie in designing lightning-fast data structures and algorithms for storage, databases, and machine learning systems. I recently began designing a high-performance key-value store for HFT systems.
+                        </p>
+                        <p class="mb-0">
+                            I am actively seeking opportunities in the computer systems research community (academic roles) as well as quantitative research positions in industry.
+                            If you find my work relevant, feel free to contact me via email or WeChat.
+                        </p>
+                    </div>
                 </section>
-                <!--//summary-section-->
 
-                <div class="row">
-                    <div class="col-lg-9">
-
-                        <!--Education-->
+                <!-- === Two-column content grid: Left (3/5) | Right (2/5) === -->
+                <div class="content-grid">
+                    <!-- LEFT: 3/5 width -->
+                    <div class="main-rail">
+                        <!-- Education (unchanged) -->
                         <section class="resume-section experience-section mb-5">
                             <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
                             <div class="resume-section-content">
                                 <div class="resume-timeline position-relative">
-                                    <!-- <article class="resume-timeline-item position-relative pb-3">
-
+                                    <article class="resume-timeline-item position-relative pb-3">
                                         <div class="resume-timeline-item-header mb-2">
                                             <div class="d-flex flex-column flex-md-row">
-                                                <h3 class="resume-position-title font-weight-bold mb-1">The Middle School Attached To Northwestern Polytechnical University</h3>
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Tsinghua University</h3>
                                             </div>
-                                            <div class="resume-position-time ">2012 - 2018</div>
+                                            <div class="resume-position-time">2021 - Present</div>
                                         </div>
-
-                                        <div class="resume-timeline-item-desc ">
-                                            <p>I had some extra learning experience in physics and math competitions, while getting some awards during middle school.</p>
-
-                                        </div>
-                                    </article> -->
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">Tsinghua
-                                                    University</h3>
-                                            </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">2021 - Present</div>
-                                        </div>
-
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
-                                            <p>PhD student in Institute for Interdisciplinary Information Science
-                                                (IIIS)</p>
+                                        <div class="resume-timeline-item-desc">
+                                            <p>PhD student in Institute for Interdisciplinary Information Science (IIIS)</p>
                                             <p>Advisor: Huanchen Zhang</p>
                                             <p>Research Topics: Concurrent Data Structures, ML Systems, Cloud Databases</p>
-
-                                            <!-- <a href="assets/images/Transcript-level.pdf" target="_blank"> <i>&nbsp;
-                                                    Detailed Transcript</i></a> -->
                                         </div>
                                     </article>
 
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">Peking University
+                                    <article class="resume-timeline-item position-relative pb-3">
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Peking University</h3>
                                             </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">2022 - 2025</div>
+                                            <div class="resume-position-time">2022 - 2025</div>
                                         </div>
-
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
+                                        <div class="resume-timeline-item-desc">
                                             <p>Minor in Economics in the National School of Development</p>
-
-                                            <!-- <a href="assets/images/Transcript-level.pdf" target="_blank"> <i>&nbsp;
-                                                    Detailed Transcript</i></a> -->
                                         </div>
-
-
                                     </article>
 
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">Peking University
+                                    <article class="resume-timeline-item position-relative pb-3">
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Peking University</h3>
                                             </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">2017 - 2021</div>
+                                            <div class="resume-position-time">2017 - 2021</div>
                                         </div>
-
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
+                                        <div class="resume-timeline-item-desc">
                                             <p>BS in Yuanpei College</p>
-                                            <p>Advisor: Tong Yang </p>
-                                            <p>Research Topics: Probabilistic Data Structures </p>
-
-                                            <!-- <a href="assets/images/Transcript-level.pdf" target="_blank"> <i>&nbsp;
-                                                    Detailed Transcript</i></a> -->
+                                            <p>Advisor: Tong Yang</p>
+                                            <p>Research Topics: Probabilistic Data Structures</p>
                                         </div>
-
-
                                     </article>
                                 </div>
-
                             </div>
                         </section>
 
-
+                        <!-- Professional Experience (left, narrower now because of grid) -->
                         <section class="resume-section experience-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3 ">Professional
-                                Experience </h2>
-                            
-                                <div class="resume-timeline position-relative">
-                                    <!--//item-->
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">
-                                                    Jiaqi Investment</h3>
-                                                <div class="resume-company-name ml-auto ">Beijing, China</div>
-                                            </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">June 2025 - Sep 2025</div>
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Professional Experience</h2>
+                            <div class="resume-timeline position-relative">
+                                <article class="resume-timeline-item position-relative pb-3">
+                                    <div class="resume-timeline-item-header mb-2">
+                                        <div class="d-flex flex-column flex-md-row">
+                                            <h3 class="resume-position-title font-weight-bold mb-1">Jiaqi Investment</h3>
+                                            <div class="resume-company-name ml-auto">Beijing, China</div>
                                         </div>
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
-                                            <p>Quantative Researcher (HFT) </p>
-                                            </p>
+                                        <div class="resume-position-time">June 2025 - Sep 2025</div>
+                                    </div>
+                                    <div class="resume-timeline-item-desc">
+                                        <p>Quantative Researcher (HFT)</p>
+                                    </div>
+                                </article>
+
+                                <article class="resume-timeline-item position-relative pb-3">
+                                    <div class="resume-timeline-item-header mb-2">
+                                        <div class="d-flex flex-column flex-md-row">
+                                            <h3 class="resume-position-title font-weight-bold mb-1">F Lab</h3>
+                                            <div class="resume-company-name ml-auto">Shenzhen, China</div>
                                         </div>
-                                        <!--//resume-timeline-item-desc-->
+                                        <div class="resume-position-time">Jan 2025 - June 2025</div>
+                                    </div>
+                                    <div class="resume-timeline-item-desc">
+                                        <p>Quantative Researcher</p>
+                                    </div>
+                                </article>
 
-                                    </article>
-
-
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">
-                                                    F Lab</h3>
-                                                <div class="resume-company-name ml-auto ">Shenzhen, China</div>
-                                            </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">Jan 2025 - June 2025</div>
+                                <article class="resume-timeline-item position-relative pb-3">
+                                    <div class="resume-timeline-item-header mb-2">
+                                        <div class="d-flex flex-column flex-md-row">
+                                            <h3 class="resume-position-title font-weight-bold mb-1">InstaMeta</h3>
+                                            <div class="resume-company-name ml-auto">Shenzhen, China</div>
                                         </div>
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
-                                            <p>Quantative Researcher </p>
-                                            </p>
+                                        <div class="resume-position-time">Jan 2025 - June 2025</div>
+                                    </div>
+                                    <div class="resume-timeline-item-desc">
+                                        <p>AIGC Research intern</p>
+                                    </div>
+                                </article>
+
+                                <article class="resume-timeline-item position-relative pb-3">
+                                    <div class="resume-timeline-item-header mb-2">
+                                        <div class="d-flex flex-column flex-md-row">
+                                            <h3 class="resume-position-title font-weight-bold mb-1">Shanghai Qi Zhi Institute</h3>
+                                            <div class="resume-company-name ml-auto">Shanghai, China</div>
                                         </div>
-                                        <!--//resume-timeline-item-desc-->
+                                        <div class="resume-position-time">Aug 2022 - Present</div>
+                                    </div>
+                                    <div class="resume-timeline-item-desc">
+                                        <p>Research intern on Cost-Intelligent Data Analytics in the Cloud</p>
+                                    </div>
+                                </article>
 
-                                    </article>
-
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">
-                                                   InstaMeta</h3>
-                                                <div class="resume-company-name ml-auto ">Shenzhen, China</div>
-                                            </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">Jan 2025 - June 2025</div>
-                                        </div>
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
-                                            <p>AIGC Research intern</p>
-                                            </p>
-                                        </div>
-                                        <!--//resume-timeline-item-desc-->
-
-                                    </article>
-                                    
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">
-                                                    Shanghai Qi Zhi Institute</h3>
-                                                <div class="resume-company-name ml-auto ">Shanghai, China</div>
-                                            </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">Aug 2022 - Present</div>
-                                        </div>
-                                        <!--//resume-timeline-item-header-->
-                                        <div class="resume-timeline-item-desc ">
-                                            <p>Research intern on Cost-Intelligent Data Analytics in the Cloud </p>
-                                            </p>
-                                        </div>
-                                        <!--//resume-timeline-item-desc-->
-
-                                    </article>
-
-
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="d-flex flex-column flex-md-row ">
-                                            <h3 class="resume-position-title font-weight-bold mb-1 ">Tencent</h3>
-                                            <div class="resume-company-name ml-auto ">Beijing, China</div>
-                                        </div>
-
-
-                                        <div class="resume-position-time ">July 2020 - Sep 2020</div>
-
-
-                                        <div class="resume-timeline-item-desc ">
-                                            <p> Research intern on Intelligent Traffic Prediction</p>
-
-                                        </div>
-                                    </article>
-
-                                </div>
-                                <!--//resume-timeline-->
-
+                                <article class="resume-timeline-item position-relative pb-3">
+                                    <div class="d-flex flex-column flex-md-row">
+                                        <h3 class="resume-position-title font-weight-bold mb-1">Tencent</h3>
+                                        <div class="resume-company-name ml-auto">Beijing, China</div>
+                                    </div>
+                                    <div class="resume-position-time">July 2020 - Sep 2020</div>
+                                    <div class="resume-timeline-item-desc">
+                                        <p>Research intern on Intelligent Traffic Prediction</p>
+                                    </div>
+                                </article>
+                            </div>
                         </section>
-                        <!--//experience-section-->
+
+                        <!-- Publications (left) -->
                         <section class="resume-section mb-5">
                             <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Publications</h2>
                             <div>
-                                 <article>
+                                <article>
                                     <div>
                                         <h3 class="resume-position-title font-weight-bold mb-1">Rethinking The Compaction Policies in LSM-trees</h3>
                                     </div>
                                     <div>
                                         <p>
                                            Hengrui Wang, Jiansheng Qiu, Fangzhou Yuan, Huanchen Zhang<br>
-                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'25), June 2025<br>
-                                           </i>
+                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'25), June 2025</i>
                                         </p>
                                     </div>
                                 </article>
-                                
                                 <article>
                                     <div>
                                         <h3 class="resume-position-title font-weight-bold mb-1">GRF: A Global Range Filter for LSM-Trees with Shape Encoding</h3>
@@ -316,12 +249,10 @@
                                     <div>
                                         <p>
                                            Hengrui Wang, Te Guo, Junzhao Yang, Huanchen Zhang<br>
-                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'24), June 2024<br>
-                                           </i>
+                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'24), June 2024</i>
                                         </p>
                                     </div>
                                 </article>
-
                                 <article>
                                     <div>
                                         <h3 class="resume-position-title font-weight-bold mb-1">PISketch: Finding Persistent and Infrequent Flows</h3>
@@ -329,13 +260,10 @@
                                     <div>
                                         <p>
                                            Zhuochen Fan, Zhoujing Hu, Yuhan Wu, Jiarui Guo, Wenrui Liu,  Tong Yang, Hengrui Wang, Yifei Xu, Steve Uhlig, Yaofeng Tu.<br>
-                                           <i>ACM SIGCOMM Workshop on Formal Foundations and Security of Programmable network INfrastructures (FFSPIN) 2022<br>
-                                           </i>
+                                           <i>ACM SIGCOMM Workshop on Formal Foundations and Security of Programmable network INfrastructures (FFSPIN) 2022</i>
                                         </p>
-                                        
                                     </div>
                                 </article>
-
                                 <article>
                                     <div>
                                         <h3 class="resume-position-title font-weight-bold mb-1">Enhanced Machine Learning Sketches for Network Measurements</h3>
@@ -343,103 +271,52 @@
                                     <div>
                                         <p>
                                            Hengrui Wang, Huiping Lin, Zheng Zhong,  Tong Yang, Muhammad Shahzad<br>
-                                        <i>Transactions on Computers 2022<br>
-                                        </i>
+                                           <i>Transactions on Computers 2022</i>
                                         </p>
                                     </div>
                                 </article>
                             </div>
                         </section>
-
-                        <section class="resume-section experience-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3 ">Teaching </h2>
-                            
-                                <div class="resume-timeline position-relative">
-                                    <!--//item-->
-
-
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="resume-timeline-item-header mb-2 ">
-                                            <div class="d-flex flex-column flex-md-row ">
-                                                <h3 class="resume-position-title font-weight-bold mb-1 ">
-                                                    Introduction to Programming</h3>
-                                                <div class="resume-company-name ml-auto ">Tsinghua University</div>
-                                            </div>
-                                            <!--//row-->
-                                            <div class="resume-position-time ">Spring 2022 </div>
-                                        </div>
-                                    
-                                    </article>
-
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="d-flex flex-column flex-md-row ">
-                                            <h3 class="resume-position-title font-weight-bold mb-1 ">Data Structures in the Real World</h3>
-                                            <div class="resume-company-name ml-auto ">Tsinghua University</div>
-                                        </div>
-                                        <div class="resume-position-time ">Summer 2021</div>
-                                    </article>
-
-                                    <article class="resume-timeline-item position-relative pb-3 ">
-
-                                        <div class="d-flex flex-column flex-md-row ">
-                                            <h3 class="resume-position-title font-weight-bold mb-1 ">Algorithm Design and Analysis</h3>
-                                            <div class="resume-company-name ml-auto ">Peking University</div>
-                                        </div>
-                                        <div class="resume-position-time ">Spring 2021</div>
-                                    </article>
-
-                                </div>
-                                <!--//resume-timeline-->
-
-                        </section>
-                        
-
-
-
                     </div>
+
+                    <!-- RIGHT: 2/5 width side rail -->
+                    <aside class="side-rail">
+                        <!-- Teaching (right) -->
+                        <section class="resume-section experience-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Teaching</h2>
+                            <div class="resume-timeline position-relative">
+                                <div class="teaching-item">
+                                    <div class="teaching-time">Spring 2022</div>
+                                    <div class="teaching-course">Introduction to Programming</div>
+                                </div>
+                                <div class="teaching-item">
+                                    <div class="teaching-time">Summer 2021</div>
+                                    <div class="teaching-course">Data Structures in the Real World</div>
+                                </div>
+                                <div class="teaching-item">
+                                    <div class="teaching-time">Spring 2021</div>
+                                    <div class="teaching-course">Algorithm Design and Analysis</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Interests (right, under Teaching) -->
+                        <section class="resume-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
+                            <div class="resume-section-content">
+                                <p class="mb-3">Outside the lab, I train in Sanda and boxing and serve as president of the Tsinghua University Sanda Club. I’ve earned bronze (70 kg) and silver (75 kg) at the Capital University Sanda Championships, and bronze in the 72 kg non-professional division at the National College Sanda Championships.</p>
+                                <img src="box.jpg" alt="Sanda & Boxing" class="interests-img">
+                                <div class="interests-caption">Training & competition highlights</div>
+                            </div>
+                        </section>
+                    </aside>
                 </div>
-                
             </div>
-            <!--//resume-body-->
-
-
         </div>
     </article>
 
-
-
-
-
-
+    <footer class="footer text-center pt-2 pb-5">
+        <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+    </footer>
 </body>
-
-</html>
-
-</html>
-</div>
-<!--//resume-body-->
-
-
-</div>
-</article>
-
-
-<footer class="footer text-center pt-2 pb-5 ">
-    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-    <small class="copyright ">Designed with <i class="fas fa-heart "></i> by <a href="http://themes.3rdwavemedia.com "
-            target="_blank ">Xiaoying Riley</a> for developers</small>
-</footer>
-
-
-
-</body>
-
-</html>
-
-</html>
-
-</html>
-
 </html>
