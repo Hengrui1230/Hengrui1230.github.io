@@ -38,14 +38,8 @@
         .side-rail .resume-section-title { margin-bottom: 1rem; }
         .side-rail .resume-timeline { margin-top: 0.5rem; }
         /* Interests image */
-        .interests-img {
-            width: 100%;
-            max-width: 460px; /* keep it neat in the 2/5 rail */
-            height: auto;
-            display: block;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-        }
+        .interests-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .interests-grid img { width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
         .interests-caption { font-size: 0.95rem; color: #666; margin-top: 0.5rem; }
         /* Remove school labels in Teaching items */
         .teaching-item { padding-bottom: 0.75rem; border-bottom: 1px dashed #e9ecef; margin-bottom: 0.75rem; }
@@ -286,6 +280,10 @@
                             <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Teaching</h2>
                             <div class="resume-timeline position-relative">
                                 <div class="teaching-item">
+    <div class="teaching-time">2025</div>
+    <div class="teaching-course">Database System</div>
+</div>
+<div class="teaching-item">
                                     <div class="teaching-time">Spring 2022</div>
                                     <div class="teaching-course">Introduction to Programming</div>
                                 </div>
@@ -304,10 +302,14 @@
                         <section class="resume-section mb-5">
                             <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
                             <div class="resume-section-content">
-                                <p class="mb-3">Outside the lab, I train in Sanda and boxing. I have medaled in collegiate competitions: bronze at 70 kg and silver at 75 kg in the Capital University Sanda Championships, and bronze in the 72 kg non-professional division of the National College Sanda Championships. The discipline and focus from combat sports shape how I approach research and engineering.</p>
-                                <img src="box.jpg" alt="Sanda & Boxing" class="interests-img">
-                                <div class="interests-caption">Training & competition highlights</div>
-                            </div>
+                                <p class="mb-3">Outside the lab, I train in Sanda and boxing and serve as president of the Tsinghua University Sanda Club. I’ve earned bronze (70 kg) and silver (75 kg) at the Capital University Sanda Championships, and bronze in the 72 kg non-professional division at the National College Sanda Championships. The discipline and focus from combat sports shape how I approach research and engineering.</p>
+                                <div class="interests-grid">
+                                    <img src="box2.jpg" alt="Sanda/Boxing photo 1">
+                                    <img src="box3.jpg" alt="Sanda/Boxing photo 2">
+                                    <img src="box4.jpg" alt="Sanda/Boxing photo 3">
+                                    <img src="box5.jpg" alt="Sanda/Boxing photo 4">
+                                </div>
+                                <div class="interests-caption">Selected training & competition moments</div></div>
                         </section>
                     </aside>
                 </div>
