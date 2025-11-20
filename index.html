@@ -45,12 +45,6 @@
         .teaching-item { padding-bottom: 0.75rem; border-bottom: 1px dashed #e9ecef; margin-bottom: 0.75rem; }
         .teaching-time { font-weight: 500; color: #6c757d; }
         .teaching-course { font-weight: 600; }
-
-        /* About Me second paragraph: black & bold */
-        .about-focus {
-            color: #000;
-            font-weight: 700;
-        }
     </style>
 </head>
 
@@ -95,12 +89,14 @@
                         <p class="mb-3">
                             I am a PhD student in the Institute for Interdisciplinary Information Science (Yao Class) at Tsinghua University, advised by
                             <a href="https://people.iiis.tsinghua.edu.cn/~huanchen/index.html" target="_blank">Prof. Huanchen Zhang</a>.
-                            Previously, I received my BS from Yuanpei College (minor in Economics from NSD) at Peking University, where I worked with
-                            <a href="https://yangtonghome.github.io/" target="_blank">Prof. Tong Yang</a> on probabilistic data structures.
-                            Broadly, my research interests lie in designing lightning-fast data structures and algorithms for storage, databases, and machine learning systems. I am currently designing a high-performance key-value store for HFT systems. I am always happy to participate in research collaborations in both academia and industry. If you find my work relevant, feel free to contact me via email or WeChat.
+                            Before joining Tsinghua, I obtained my BS at Yuanpei College of Peking University, advised by
+                            <a href="https://yangtonghome.github.io/" target="_blank">Prof. Tong Yang</a>.
+                            My research interests mainly lie in designing lightning-fast data structures and algorithms for storage, databases, and machine learning systems. I recently began designing a high-performance key-value store for HFT systems.
                         </p>
-                        <p class="mb-0 about-focus">
-                            I am currently seeking academic positions in universities and will not start any new interview processes with companies.                        </p>
+                        <p class="mb-0">
+                            I am actively seeking opportunities in the computer systems research community (academic roles) as well as quantitative research positions in industry.
+                            If you find my work relevant, feel free to contact me via email or WeChat.
+                        </p>
                     </div>
                 </section>
 
@@ -108,7 +104,55 @@
                 <div class="content-grid">
                     <!-- LEFT: 3/5 width -->
                     <div class="main-rail">
-                        <!-- Professional Experience -->
+                        <!-- Education (unchanged) -->
+                        <section class="resume-section experience-section mb-5">
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
+                            <div class="resume-section-content">
+                                <div class="resume-timeline position-relative">
+                                    <article class="resume-timeline-item position-relative pb-3">
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Tsinghua University</h3>
+                                            </div>
+                                            <div class="resume-position-time">2021 - Present</div>
+                                        </div>
+                                        <div class="resume-timeline-item-desc">
+                                            <p>PhD in Institute for Interdisciplinary Information Science (IIIS)</p>
+                                            <p>Advisor: Huanchen Zhang</p>
+                                            <p>Research Topics: Concurrent Data Structures, ML Systems, Cloud Databases</p>
+                                        </div>
+                                    </article>
+
+                                    <article class="resume-timeline-item position-relative pb-3">
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Peking University</h3>
+                                            </div>
+                                            <div class="resume-position-time">2022 - 2025</div>
+                                        </div>
+                                        <div class="resume-timeline-item-desc">
+                                            <p>Minor in Economics in the National School of Development</p>
+                                        </div>
+                                    </article>
+
+                                    <article class="resume-timeline-item position-relative pb-3">
+                                        <div class="resume-timeline-item-header mb-2">
+                                            <div class="d-flex flex-column flex-md-row">
+                                                <h3 class="resume-position-title font-weight-bold mb-1">Peking University</h3>
+                                            </div>
+                                            <div class="resume-position-time">2017 - 2021</div>
+                                        </div>
+                                        <div class="resume-timeline-item-desc">
+                                            <p>BS in Yuanpei College</p>
+                                            <p>Advisor: Tong Yang</p>
+                                            <p>Research Topics: Probabilistic Data Structures</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Professional Experience (left, narrower now because of grid) -->
                         <section class="resume-section experience-section mb-5">
                             <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Professional Experience</h2>
                             <div class="resume-timeline position-relative">
@@ -164,9 +208,9 @@
                             </div>
                         </section>
 
-                        <!-- Selected Publications (left) -->
+                        <!-- Publications (left) -->
                         <section class="resume-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Selected Publications</h2>
+                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Publications</h2>
                             <div>
                                 <article>
                                     <div>
@@ -190,6 +234,28 @@
                                         </p>
                                     </div>
                                 </article>
+                                <article>
+                                    <div>
+                                        <h3 class="resume-position-title font-weight-bold mb-1">PISketch: Finding Persistent and Infrequent Flows</h3>
+                                    </div>
+                                    <div>
+                                        <p>
+                                           Zhuochen Fan, Zhoujing Hu, Yuhan Wu, Jiarui Guo, Wenrui Liu,  Tong Yang, Hengrui Wang, Yifei Xu, Steve Uhlig, Yaofeng Tu.<br>
+                                           <i>ACM SIGCOMM Workshop on Formal Foundations and Security of Programmable network INfrastructures (FFSPIN) 2022</i>
+                                        </p>
+                                    </div>
+                                </article>
+                                <article>
+                                    <div>
+                                        <h3 class="resume-position-title font-weight-bold mb-1">Enhanced Machine Learning Sketches for Network Measurements</h3>
+                                    </div>
+                                    <div>
+                                        <p>
+                                           Hengrui Wang, Huiping Lin, Zheng Zhong,  Tong Yang, Muhammad Shahzad<br>
+                                           <i>Transactions on Computers 2022</i>
+                                        </p>
+                                    </div>
+                                </article>
                             </div>
                         </section>
                     </div>
@@ -201,10 +267,10 @@
                             <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Teaching</h2>
                             <div class="resume-timeline position-relative">
                                 <div class="teaching-item">
-                                    <div class="teaching-time">Spring 2025</div>
-                                    <div class="teaching-course">Database System</div>
-                                </div>
-                                <div class="teaching-item">
+    <div class="teaching-time">Spring 2025</div>
+    <div class="teaching-course">Database System</div>
+</div>
+<div class="teaching-item">
                                     <div class="teaching-time">Spring 2022</div>
                                     <div class="teaching-course">Introduction to Programming</div>
                                 </div>
@@ -230,8 +296,7 @@
                                     <img src="box4.jpg" alt="Sanda/Boxing photo 3">
                                     <img src="box5.jpg" alt="Sanda/Boxing photo 4">
                                 </div>
-                                <div class="interests-caption">Selected training & competition moments</div>
-                            </div>
+                                <div class="interests-caption">Selected training & competition moments</div></div>
                         </section>
                     </aside>
                 </div>
