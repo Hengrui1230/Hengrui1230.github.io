@@ -1,322 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <title>Hengrui Wang</title>
-
-    <!-- Meta -->
-    <meta name="google-site-verification" content="C4ap4GvJ1LcgMMoKaN9kn_TDZfo5WBADrysK9PJoC3A" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Resume Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-
-    <!-- FontAwesome JS-->
-    <script defer src="assets/fontawesome/js/all.min.js"></script>
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css">
-
-    <style>
-        /* === Custom additions for 3/5 + 2/5 layout === */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 3fr 2fr; /* 3/5 and 2/5 */
-            grid-gap: 2rem;
-        }
-        /* Stack on smaller screens */
-        @media (max-width: 992px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* Tighter sections in right rail */
-        .side-rail .resume-section-title { margin-bottom: 1rem; }
-        .side-rail .resume-timeline { margin-top: 0.5rem; }
-        /* Interests image */
-        .interests-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .interests-grid img { width: 100%; height: auto; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
-        .interests-caption { font-size: 0.95rem; color: #666; margin-top: 0.5rem; }
-        /* Remove school labels in Teaching items */
-        .teaching-item { padding-bottom: 0.75rem; border-bottom: 1px dashed #e9ecef; margin-bottom: 0.75rem; }
-        .teaching-time { font-weight: 500; color: #6c757d; }
-        .teaching-course { font-weight: 600; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="C4ap4GvJ1LcgMMoKaN9kn_TDZfo5WBADrysK9PJoC3A">
+  <meta name="description" content="Hengrui Wang — Researcher at DeepSeek, Infra Team. Tsinghua Ph.D., June 2026. Vector search systems, multimodal data formats for LLMs, and data planes for RL post-training.">
+  <meta name="author" content="Hengrui Wang">
+  <meta name="theme-color" content="#181717">
+  <title>Hengrui Wang</title>
+  <link rel="canonical" href="https://hengrui1230.github.io/">
+  <link rel="icon" href="assets/images/monogram.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/images/editorial/background.jpeg" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/home.css?v=10">
+  <script src="assets/js/home.js?v=3" defer></script>
 </head>
-
 <body>
-    <article class="resume-wrapper text-center position-relative">
-        <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-            <header class="resume-header pt-4 pt-md-0">
-                <div class="media flex-column flex-md-row">
-                    <img class="mr-3 img-fluid picture mx-auto" src="assets/images/profile.jpg" alt="">
-                    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-                        <div class="primary-info">
-                            <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Hengrui Wang</h1>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>wang-hr21@mails.tsinghua.edu.cn</li>
-                                <li><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>WeChat: whr98991230</li>
-                            </ul>
-                            <ul class="resume-social list-unstyled">
-                                <li class="mb-3">
-                                    <a href="Hengrui.pdf" target="_blank">
-                                        <span class="fa-container text-center mr-2">
-                                            <i class="far fa-file-pdf fa-fw"></i>
-                                        </span>CV
-                                    </a>
-                                </li>
-                                <li class="mb-3">
-                                    <a href="https://scholar.google.com.hk/citations?user=RGSdeUcAAAAJ&hl=zh-CN" target="_blank">
-                                        <span class="fa-container text-center mr-2">
-                                            <i class="fas fa-graduation-cap fa-fw"></i>
-                                        </span>Google Scholar
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <div class="resume-body p-5">
-                <section class="resume-section summary-section mb-5">
-                    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">About Me</h2>
-                    <div class="resume-section-content">
-                        <p class="mb-3">
-                            I am a PhD student in the Institute for Interdisciplinary Information Science (Yao Class) at Tsinghua University, advised by
-                            <a href="https://people.iiis.tsinghua.edu.cn/~huanchen/index.html" target="_blank">Prof. Huanchen Zhang</a>.
-                            Before joining Tsinghua, I obtained my BS at Yuanpei College of Peking University, advised by
-                            <a href="https://yangtonghome.github.io/" target="_blank">Prof. Tong Yang</a>.
-                            My research interests mainly lie in designing lightning-fast data structures and algorithms for storage, databases, and machine learning systems. I recently began designing a high-performance key-value store for HFT systems.
-                        </p>
-                        <p class="mb-0">
-                            I am actively seeking opportunities in the computer systems research community (academic roles) as well as quantitative research positions in industry.
-                            If you find my work relevant, feel free to contact me via email or WeChat.
-                        </p>
-                    </div>
-                </section>
-
-                <!-- === Two-column content grid: Left (3/5) | Right (2/5) === -->
-                <div class="content-grid">
-                    <!-- LEFT: 3/5 width -->
-                    <div class="main-rail">
-                        <!-- Education (unchanged) -->
-                        <section class="resume-section experience-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
-                            <div class="resume-section-content">
-                                <div class="resume-timeline position-relative">
-                                    <article class="resume-timeline-item position-relative pb-3">
-                                        <div class="resume-timeline-item-header mb-2">
-                                            <div class="d-flex flex-column flex-md-row">
-                                                <h3 class="resume-position-title font-weight-bold mb-1">Tsinghua University</h3>
-                                            </div>
-                                            <div class="resume-position-time">2021 - Present</div>
-                                        </div>
-                                        <div class="resume-timeline-item-desc">
-                                            <p>PhD in Institute for Interdisciplinary Information Science (IIIS)</p>
-                                            <p>Advisor: Huanchen Zhang</p>
-                                            <p>Research Topics: Concurrent Data Structures, ML Systems, Cloud Databases</p>
-                                        </div>
-                                    </article>
-
-                                    <article class="resume-timeline-item position-relative pb-3">
-                                        <div class="resume-timeline-item-header mb-2">
-                                            <div class="d-flex flex-column flex-md-row">
-                                                <h3 class="resume-position-title font-weight-bold mb-1">Peking University</h3>
-                                            </div>
-                                            <div class="resume-position-time">2022 - 2025</div>
-                                        </div>
-                                        <div class="resume-timeline-item-desc">
-                                            <p>Minor in Economics in the National School of Development</p>
-                                        </div>
-                                    </article>
-
-                                    <article class="resume-timeline-item position-relative pb-3">
-                                        <div class="resume-timeline-item-header mb-2">
-                                            <div class="d-flex flex-column flex-md-row">
-                                                <h3 class="resume-position-title font-weight-bold mb-1">Peking University</h3>
-                                            </div>
-                                            <div class="resume-position-time">2017 - 2021</div>
-                                        </div>
-                                        <div class="resume-timeline-item-desc">
-                                            <p>BS in Yuanpei College</p>
-                                            <p>Advisor: Tong Yang</p>
-                                            <p>Research Topics: Probabilistic Data Structures</p>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Professional Experience (left, narrower now because of grid) -->
-                        <section class="resume-section experience-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Professional Experience</h2>
-                            <div class="resume-timeline position-relative">
-                                <article class="resume-timeline-item position-relative pb-3">
-                                    <div class="resume-timeline-item-header mb-2">
-                                        <div class="d-flex flex-column flex-md-row">
-                                            <h3 class="resume-position-title font-weight-bold mb-1">Jiaqi Investment</h3>
-                                            <div class="resume-company-name ml-auto">Beijing, China</div>
-                                        </div>
-                                        <div class="resume-position-time">June 2025 - Sep 2025</div>
-                                    </div>
-                                    <div class="resume-timeline-item-desc">
-                                        <p>Quantative Researcher (HFT)</p>
-                                    </div>
-                                </article>
-
-                                <article class="resume-timeline-item position-relative pb-3">
-                                    <div class="resume-timeline-item-header mb-2">
-                                        <div class="d-flex flex-column flex-md-row">
-                                            <h3 class="resume-position-title font-weight-bold mb-1">F Lab</h3>
-                                            <div class="resume-company-name ml-auto">Shenzhen, China</div>
-                                        </div>
-                                        <div class="resume-position-time">Jan 2025 - June 2025</div>
-                                    </div>
-                                    <div class="resume-timeline-item-desc">
-                                        <p>Quantative Researcher</p>
-                                    </div>
-                                </article>
-
-                                <article class="resume-timeline-item position-relative pb-3">
-                                    <div class="resume-timeline-item-header mb-2">
-                                        <div class="d-flex flex-column flex-md-row">
-                                            <h3 class="resume-position-title font-weight-bold mb-1">Shanghai Qi Zhi Institute</h3>
-                                            <div class="resume-company-name ml-auto">Shanghai, China</div>
-                                        </div>
-                                        <div class="resume-position-time">Aug 2022 - Present</div>
-                                    </div>
-                                    <div class="resume-timeline-item-desc">
-                                        <p>Research intern on Cost-Intelligent Data Analytics in the Cloud</p>
-                                    </div>
-                                </article>
-
-                                <article class="resume-timeline-item position-relative pb-3">
-                                    <div class="d-flex flex-column flex-md-row">
-                                        <h3 class="resume-position-title font-weight-bold mb-1">Tencent</h3>
-                                        <div class="resume-company-name ml-auto">Beijing, China</div>
-                                    </div>
-                                    <div class="resume-position-time">July 2020 - Sep 2020</div>
-                                    <div class="resume-timeline-item-desc">
-                                        <p>Research intern on Intelligent Traffic Prediction</p>
-                                    </div>
-                                </article>
-                            </div>
-                        </section>
-
-                        <!-- Publications (left) -->
-                        <section class="resume-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Publications</h2>
-                            <div>
-                                <article>
-                                    <div>
-                                        <h3 class="resume-position-title font-weight-bold mb-1">Improving Range Scan Performance in LSM-trees with Group Caching</h3>
-                                    </div>
-                                    <div>
-                                        <p>
-                                           Hengrui Wang, Jiaoyi Zhang, Jiansheng Qiu, Fangzhou Yuan, Huanchen Zhang<br>
-                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'26), June 2026</i>
-                                        </p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <div>
-                                        <h3 class="resume-position-title font-weight-bold mb-1">Rethinking The Compaction Policies in LSM-trees</h3>
-                                    </div>
-                                    <div>
-                                        <p>
-                                           Hengrui Wang, Jiansheng Qiu, Fangzhou Yuan, Huanchen Zhang<br>
-                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'25), June 2025</i>
-                                        </p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <div>
-                                        <h3 class="resume-position-title font-weight-bold mb-1">GRF: A Global Range Filter for LSM-Trees with Shape Encoding</h3>
-                                    </div>
-                                    <div>
-                                        <p>
-                                           Hengrui Wang, Te Guo, Junzhao Yang, Huanchen Zhang<br>
-                                           <i>Proceedings of the ACM on Management of Data (SIGMOD'24), June 2024</i>
-                                        </p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <div>
-                                        <h3 class="resume-position-title font-weight-bold mb-1">PISketch: Finding Persistent and Infrequent Flows</h3>
-                                    </div>
-                                    <div>
-                                        <p>
-                                           Zhuochen Fan, Zhoujing Hu, Yuhan Wu, Jiarui Guo, Wenrui Liu,  Tong Yang, Hengrui Wang, Yifei Xu, Steve Uhlig, Yaofeng Tu.<br>
-                                           <i>ACM SIGCOMM Workshop on Formal Foundations and Security of Programmable network INfrastructures (FFSPIN) 2022</i>
-                                        </p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <div>
-                                        <h3 class="resume-position-title font-weight-bold mb-1">Enhanced Machine Learning Sketches for Network Measurements</h3>
-                                    </div>
-                                    <div>
-                                        <p>
-                                           Hengrui Wang, Huiping Lin, Zheng Zhong,  Tong Yang, Muhammad Shahzad<br>
-                                           <i>Transactions on Computers 2022</i>
-                                        </p>
-                                    </div>
-                                </article>
-                            </div>
-                        </section>
-                    </div>
-
-                    <!-- RIGHT: 2/5 width side rail -->
-                    <aside class="side-rail">
-                        <!-- Teaching (right) -->
-                        <section class="resume-section experience-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Teaching</h2>
-                            <div class="resume-timeline position-relative">
-                                <div class="teaching-item">
-    <div class="teaching-time">Spring 2025</div>
-    <div class="teaching-course">Database System</div>
-</div>
-<div class="teaching-item">
-                                    <div class="teaching-time">Spring 2022</div>
-                                    <div class="teaching-course">Introduction to Programming</div>
-                                </div>
-                                <div class="teaching-item">
-                                    <div class="teaching-time">Summer 2021</div>
-                                    <div class="teaching-course">Data Structures in the Real World</div>
-                                </div>
-                                <div class="teaching-item">
-                                    <div class="teaching-time">Spring 2021</div>
-                                    <div class="teaching-course">Algorithm Design and Analysis</div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Interests (right, under Teaching) -->
-                        <section class="resume-section mb-5">
-                            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Interests</h2>
-                            <div class="resume-section-content">
-                                <p class="mb-3">Outside the lab, I train in Sanda and boxing and serve as president of the Tsinghua University Sanda Club. I’ve earned bronze (70 kg) and silver (75 kg) at the Capital University Sanda Championships, and bronze in the 72 kg non-professional division at the National College Sanda Championships. </p>
-                                <div class="interests-grid">
-                                    <img src="box2.jpg" alt="Sanda/Boxing photo 1">
-                                    <img src="box3.jpg" alt="Sanda/Boxing photo 2">
-                                    <img src="box4.jpg" alt="Sanda/Boxing photo 3">
-                                    <img src="box5.jpg" alt="Sanda/Boxing photo 4">
-                                </div>
-                                <div class="interests-caption">Selected training & competition moments</div></div>
-                        </section>
-                    </aside>
-                </div>
-            </div>
+  <div class="site-background" aria-hidden="true">
+    <svg class="background-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="background-sharpen" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+          <feConvolveMatrix order="3" kernelMatrix="0 -0.18 0 -0.18 1.72 -0.18 0 -0.18 0" divisor="1" edgeMode="duplicate" preserveAlpha="true"/>
+        </filter>
+      </defs>
+    </svg>
+    <img src="assets/images/editorial/background.jpeg" width="1086" height="724" alt="" fetchpriority="high" style="filter: url(#background-sharpen) brightness(1.18) saturate(1.34)">
+    <div class="background-shade"></div>
+  </div>
+  <a class="skip-link" href="#about">Skip to content</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-topline"><span>BEIJING, CHINA</span></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="red-dash" aria-hidden="true"></span>RESEARCHER · DEEPSEEK INFRA TEAM</p>
+        <h1 id="hero-title"><span class="hero-first">Hengrui</span><span class="hero-last">Wang</span></h1>
+      </div>
+      <div class="hero-bottom">
+        <a class="hero-scroll" href="#about"><span class="scroll-arrow" aria-hidden="true">↓</span><span>ABOUT ME</span></a>
+        <p>TSINGHUA UNIVERSITY<span>Ph.D. · Class of 2026</span></p>
+      </div>
+    </section>
+    <section class="about section-pad dark-section" id="about" aria-labelledby="about-title">
+      <div class="section-topline"><span>01 / ABOUT ME</span></div>
+      <div class="about-grid">
+        <div class="about-heading">
+          <h2 id="about-title">About me</h2>
+          <figure class="portrait"><img src="assets/images/editorial/graduation-portrait.jpeg" width="757" height="1040" alt="Hengrui Wang in doctoral graduation robes by the pond at Tsinghua University" loading="lazy" decoding="async"><figcaption><span>TSINGHUA, 2026</span></figcaption></figure>
         </div>
-    </article>
-
-    <footer class="footer text-center pt-2 pb-5">
-        <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        <div class="about-copy">
+          <p class="intro-lead">AI infra researcher at <strong>DeepSeek.</strong></p>
+          <p>My research focuses on vector search systems, multimodal data formats for LLMs, and data planes for RL post-training.</p>
+          <p>I received my Ph.D. from the Institute for Interdisciplinary Information Science (IIIS), <strong>Tsinghua University, in June 2026</strong>, advised by <a href="https://people.iiis.tsinghua.edu.cn/~huanchen/index.html" target="_blank" rel="noopener noreferrer">Prof. Huanchen Zhang</a>. Before joining Tsinghua, I obtained my B.S. at Yuanpei College of Peking University, advised by <a href="https://yangtonghome.github.io/" target="_blank" rel="noopener noreferrer">Prof. Tong Yang</a>.</p>
+        </div>
+      </div>
+    </section>
+    <section class="experience section-pad paper-section" id="experience" aria-labelledby="experience-title">
+      <div class="section-topline"><span>02 / EXPERIENCE</span></div>
+      <div class="section-heading-row"><h2 id="experience-title">Experience</h2></div>
+      <div class="experience-grid">
+        <div class="experience-column">
+          <h3 class="column-title"><span class="column-marker" aria-hidden="true">A</span>LLM / AI</h3>
+          <article class="experience-item current"><div class="item-topline"><p class="date">JUL 2026 — PRESENT</p><span class="current-label">CURRENT</span></div><h4>DeepSeek</h4><p class="role">Researcher · Infra Team</p></article>
+          <article class="experience-item"><p class="date">MAY 2026 — JUN 2026</p><h4>ShengShu Technology </h4><p class="role">Research Intern</p><p class="experience-detail">Data infrastructure for world models.</p></article>
+          <article class="experience-item"><p class="date">MAR 2026 — JUN 2026</p><h4>ByteDance</h4><p class="role">Informal Intern</p><p class="experience-detail">Distributed KV cache.</p></article>
+        </div>
+        <div class="experience-column">
+          <h3 class="column-title"><span class="column-marker" aria-hidden="true">B</span>Quantitative Trading</h3>
+          <article class="experience-item"><p class="date">JAN 2026 — APR 2026</p><h4>Taiyan </h4><p class="role">Futures Strategy Researcher</p></article>
+          <article class="experience-item"><div class="item-topline"><p class="date">JUN 2025 — SEP 2025</p><span class="location">Beijing, China</span></div><h4>Jiaqi Investment</h4><p class="role">Quantitative Researcher (HFT)</p></article>
+          <article class="experience-item"><div class="item-topline"><p class="date">JAN 2025 — JUN 2025</p><span class="location">Shenzhen, China</span></div><h4>F Lab</h4><p class="role">Quantitative Researcher (Factor)</p><p class="experience-detail">In June 2026, the PM and the main investors decided to sue the founder after they found out that he was a total scammer.</p></article>
+        </div>
+      </div>
+      <details class="earlier-research">
+        <summary>Earlier research experience</summary>
+        <div class="earlier-grid">
+          <article><p class="date">STARTED AUG 2022 · SHANGHAI, CHINA</p><h3>Shanghai Qi Zhi Institute</h3><p>Research intern on Cost-Intelligent Data Analytics in the Cloud</p></article>
+          <article><p class="date">JUL 2020 — SEP 2020 · BEIJING, CHINA</p><h3>Tencent</h3><p>Research intern on Intelligent Traffic Prediction</p></article>
+        </div>
+      </details>
+    </section>
+    <section class="education section-pad paper-section" id="education" aria-labelledby="education-title">
+      <div class="section-topline"><span>03 / EDUCATION</span></div>
+      <div class="education-grid">
+        <div class="education-copy">
+          <h2 id="education-title">Education</h2>
+          <div class="education-list">
+            <article><p class="date">2021 — JUN 2026</p><h3>Tsinghua University</h3><p class="degree">Ph.D. · Institute for Interdisciplinary Information Science (IIIS)</p><p>Advisor: <a href="https://people.iiis.tsinghua.edu.cn/~huanchen/index.html" target="_blank" rel="noopener noreferrer">Huanchen Zhang</a></p><p class="education-topics">Concurrent Data Structures, ML Systems, Cloud Databases</p></article>
+            <article><p class="date">2022 — 2025</p><h3>Peking University</h3><p class="degree">Minor in Economics · National School of Development</p></article>
+            <article><p class="date">2017 — 2021</p><h3>Peking University</h3><p class="degree">B.S. · Yuanpei College</p><p>Advisor: <a href="https://yangtonghome.github.io/" target="_blank" rel="noopener noreferrer">Tong Yang</a></p><p class="education-topics">Probabilistic Data Structures</p></article>
+          </div>
+        </div>
+        <figure class="graduation-photo"><img src="assets/images/editorial/graduation-2026.png" width="1122" height="1402" alt="Graduation portrait of Hengrui Wang with Peking University and Tsinghua University elements" loading="lazy" decoding="async"><figcaption><span class="graduation-year">20<br>26<span aria-hidden="true">.</span></span></figcaption></figure>
+      </div>
+    </section>
+    <section class="research section-pad dark-section" id="research" aria-labelledby="research-title">
+      <div class="section-topline"><span>04 / PUBLICATIONS</span></div>
+      <div class="publication-grid">
+        <div class="publication-heading"><h2 id="research-title">Publications</h2><p>Fast data structures and algorithms for storage, databases, and machine learning systems.</p></div>
+        <ol class="publication-list">
+          <li><span class="publication-number">01</span><article><p class="publication-venue">SIGMOD ’26 <span>JUNE 2026</span></p><h3>Improving Range Scan Performance in LSM-trees with Group Caching</h3><p class="authors"><strong>Hengrui Wang</strong>, Jiaoyi Zhang, Jiansheng Qiu, Fangzhou Yuan, Huanchen Zhang</p><p class="publication-journal">Proceedings of the ACM on Management of Data</p></article></li>
+          <li><span class="publication-number">02</span><article><p class="publication-venue">SIGMOD ’25 <span>JUNE 2025</span></p><h3>Rethinking The Compaction Policies in LSM-trees</h3><p class="authors"><strong>Hengrui Wang</strong>, Jiansheng Qiu, Fangzhou Yuan, Huanchen Zhang</p><p class="publication-journal">Proceedings of the ACM on Management of Data</p></article></li>
+          <li><span class="publication-number">03</span><article><p class="publication-venue">SIGMOD ’24 <span>JUNE 2024</span></p><h3>GRF: A Global Range Filter for LSM-Trees with Shape Encoding</h3><p class="authors"><strong>Hengrui Wang</strong>, Te Guo, Junzhao Yang, Huanchen Zhang</p><p class="publication-journal">Proceedings of the ACM on Management of Data</p></article></li>
+          <li><span class="publication-number">04</span><article><p class="publication-venue">SIGCOMM / FFSPIN <span>2022</span></p><h3>PISketch: Finding Persistent and Infrequent Flows</h3><p class="authors">Zhuochen Fan, Zhoujing Hu, Yuhan Wu, Jiarui Guo, Wenrui Liu, Tong Yang, <strong>Hengrui Wang</strong>, Yifei Xu, Steve Uhlig, Yaofeng Tu</p><p class="publication-journal">ACM SIGCOMM Workshop on Formal Foundations and Security of Programmable network INfrastructures</p></article></li>
+          <li><span class="publication-number">05</span><article><p class="publication-venue">IEEE TC <span>2022</span></p><h3>Enhanced Machine Learning Sketches for Network Measurements</h3><p class="authors"><strong>Hengrui Wang</strong>, Huiping Lin, Zheng Zhong, Tong Yang, Muhammad Shahzad</p><p class="publication-journal">Transactions on Computers</p></article></li>
+        </ol>
+      </div>
+    </section>
+    <section class="teaching section-pad red-section" id="teaching" aria-labelledby="teaching-title">
+      <div class="section-topline"><span>05 / TEACHING</span></div>
+      <div class="teaching-grid"><h2 id="teaching-title">Teaching</h2><dl class="teaching-list">
+        <div><dt>Spring 2025</dt><dd>Database System</dd></div><div><dt>Spring 2022</dt><dd>Introduction to Programming</dd></div><div><dt>Summer 2021</dt><dd>Data Structures in the Real World</dd></div><div><dt>Spring 2021</dt><dd>Algorithm Design and Analysis</dd></div>
+      </dl></div>
+    </section>
+    <section class="beyond paper-section" id="beyond" aria-labelledby="beyond-title">
+      <div class="beyond-intro section-pad">
+        <div class="section-topline"><span>06 / BEYOND RESEARCH</span></div>
+        <div class="sparring-grid">
+          <div class="sparring-copy"><h2 id="beyond-title">SANDA<br><span class="ampersand">&</span> BOXING<span class="red-text">.</span></h2><p class="interests-copy">Outside the lab, I train in Sanda and boxing and serve as president of the Tsinghua University Sanda Club. I’ve earned bronze (70 kg) and silver (75 kg) at the Capital University Sanda Championships, and bronze in the 72 kg non-professional division at the National College Sanda Championships.</p></div>
+          <figure class="sparring-feature"><img src="assets/images/editorial/sparring.jpg" width="2434" height="1280" alt="Close-up of a sparring session in the boxing ring, in full color" loading="lazy" decoding="async"><figcaption><span>01 / IN THE RING</span></figcaption></figure>
+        </div>
+        <div class="training-gallery" aria-label="Sanda and boxing photographs">
+          <figure class="training-wide"><img src="assets/images/editorial/boxing-training.jpeg" width="1182" height="666" alt="Hengrui training with a sparring partner at the boxing club" loading="lazy" decoding="async"><figcaption><span>02 / BOXING</span></figcaption></figure>
+          <figure class="training-tall"><img src="assets/images/editorial/sanda-training.jpeg" width="724" height="1086" alt="Hengrui practicing a Sanda kick on a punching bag" loading="lazy" decoding="async"><figcaption><span>03 / SANDA</span></figcaption></figure>
+          <figure class="training-team"><img src="assets/images/editorial/sanda-team.jpg" width="3297" height="2213" alt="The Tsinghua University Sanda team together behind the team flag" loading="lazy" decoding="async"><figcaption><span>04 / THE TEAM</span></figcaption></figure>
+          <div class="gallery-note"><span class="gallery-note-rule" aria-hidden="true"></span><p>Selected training<br>& competition moments</p></div>
+        </div>
+      </div>
+    </section>
+    <footer class="contact section-pad dark-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-topline"><span>07 / CONTACT</span><a href="#home" class="back-top">BACK TO TOP <span aria-hidden="true">↑</span></a></div>
+      <div class="contact-grid"><h2 id="contact-title">Contact</h2>
+        <div class="contact-details">
+          <div><span class="contact-label">EMAIL</span><a class="email-link" href="mailto:wanghr981230@gmail.com">wanghr981230@gmail.com <span aria-hidden="true">↗</span></a></div>
+          <div><span class="contact-label">WECHAT</span><span class="wechat-id">whr98991230</span></div>
+          <div class="contact-links"><a href="https://scholar.google.com.hk/citations?user=RGSdeUcAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="https://github.com/Hengrui1230" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Hengrui Wang</span></div>
     </footer>
+  </main>
 </body>
 </html>
